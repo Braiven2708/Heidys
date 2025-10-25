@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 Felicitaciones Mi Heidys 💖</title>
+    <style>
+        body {
+            background-color: #ffe6f2;
+            color: #d63384;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding-top: 15%;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 2.2em;
+        }
+        .corazon {
+            position: absolute;
+            color: #ff4d88;
+            animation: flotar 6s infinite ease-in;
+        }
+        @keyframes flotar {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+<h1>💐 "Ahora si🤭, quiero que sepas que estoy muy feliz
+    por el logro que conseguiste el dia de hoy, se que no es el
+    primero pero tambien se que no sera el último, siempre te
+    lo he dicho y es que tienes muchas virtudes que sé, que te
+    han formado y fortalecido a lo que eres hoy y eso esta mas
+    que demostrado, visto lo visto hoy estuviste radiante como un
+    diamante y mas con tu sonrisa que nunca dejas de lucir.
+    <br><br>
+
+    No tengo pruebas pero tampoco dudas de que tendras un lindo
+    futuro lleno de muchos exitos, y espero estar ahi en cada
+    uno de ellos aunque sea a la distancia, pero te lo prometo
+    que estare pase lo que pase allí.<br><br>
+
+    ❤️❤️❤️Te quiero mucho mucho mi Heidys, y asi es, un pasito
+    más de esta gran personita que quiere deborarse el mundo por
+    completo!❤️❤️❤️<br><br>
+
+    Felicitaciones 🫶🏻✨"</h1>
+
+<script>
+    for (let i = 0; i < 30; i++) {
+        const c = document.createElement("div");
+        c.className = "corazon";
+        c.innerHTML = "❤️";
+        c.style.left = Math.random() * 100 + "vw";
+        c.style.animationDuration = 3 + Math.random() * 5 + "s";
+        document.body.appendChild(c);
+    }
+</script>
+</body>
+</html>
