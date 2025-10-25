@@ -10,15 +10,18 @@
             color: #d63384;
             font-family: 'Segoe UI', sans-serif;
             text-align: center;
-            padding-top: 15%;
+            padding: 20px;
             overflow: hidden;
         }
         h1 {
-            font-size: 2.2em;
+            font-size: 1.4em; /* 🌸 Tamaño más pequeño y elegante */
+            line-height: 1.4;
+            margin-top: 40vh; /* Centrado vertical */
         }
         .corazon {
             position: absolute;
             color: #ff4d88;
+            font-size: 1.2em;
             animation: flotar 6s infinite ease-in;
         }
         @keyframes flotar {
@@ -26,10 +29,22 @@
             50% { opacity: 1; }
             100% { transform: translateY(-10vh) scale(1); opacity: 0; }
         }
+
+        /* 🌿 Ajustes automáticos para celulares */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.1em;
+                margin-top: 35vh;
+            }
+            .corazon {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
-<h1>💐 "Ahora si🤭, quiero que sepas que estoy muy feliz
+<h1>💐 ¡Felicidades mi Heidys por tu grado! 🎓<br>
+    "Ahora si🤭, quiero que sepas que estoy muy feliz
     por el logro que conseguiste el dia de hoy, se que no es el
     primero pero tambien se que no sera el último, siempre te
     lo he dicho y es que tienes muchas virtudes que sé, que te
@@ -47,7 +62,7 @@
     más de esta gran personita que quiere deborarse el mundo por
     completo!❤️❤️❤️<br><br>
 
-    Felicitaciones 🫶🏻✨"</h1>
+    Felicitaciones 🫶🏻✨ </h1>
 
 <script>
     for (let i = 0; i < 30; i++) {
