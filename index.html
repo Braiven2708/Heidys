@@ -6,73 +6,112 @@
     <title>💖 Felicitaciones Mi Heidys 💖</title>
     <style>
         body {
-            background-color: #ffe6f2;
-            color: #d63384;
-            font-family: 'Segoe UI', sans-serif;
-            text-align: center;
-            padding: 20px;
-            overflow: hidden;
-        }
-        h1 {
-            font-size: 1.4em; /* 🌸 Tamaño más pequeño y elegante */
-            line-height: 1.4;
-            margin-top: 40vh; /* Centrado vertical */
-        }
-        .corazon {
-            position: absolute;
-            color: #ff4d88;
-            font-size: 1.2em;
-            animation: flotar 6s infinite ease-in;
-        }
-        @keyframes flotar {
-            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+          margin: 0;
+          height: 100vh;
+          background: linear-gradient(135deg, #ffe6f2, #ffb3c6);
+          overflow: hidden;
+          font-family: 'Poppins', sans-serif;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          color: #4a004e;
+          padding: 20px;
         }
 
-        /* 🌿 Ajustes automáticos para celulares */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.1em;
-                margin-top: 35vh;
-            }
-            .corazon {
-                font-size: 1em;
-            }
+        h1 {
+          font-size: 1.5em;
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-size: 0.95em; /* 🔹 Tamaño más pequeño para celulares */
+          line-height: 1.5;
+          max-width: 600px;
+        }
+
+        /* 💖 Corazones flotantes */
+        .heart {
+          position: absolute;
+          color: #ff4d88;
+          font-size: 18px;
+          animation: float 6s infinite ease-in-out;
+          opacity: 0.8;
+        }
+
+        @keyframes float {
+          0% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(-100vh) scale(0.6);
+            opacity: 0;
+          }
+        }
+
+        /* Ajustes para celulares */
+        @media (max-width: 480px) {
+          h1 {
+            font-size: 1.2em;
+          }
+          p {
+            font-size: 0.9em;
+          }
         }
     </style>
 </head>
 <body>
-<h1>💐 ¡Felicidades mi Heidys por tu grado! 🎓<br>
-    "Ahora si🤭, quiero que sepas que estoy muy feliz
-    por el logro que conseguiste el dia de hoy, se que no es el
-    primero pero tambien se que no sera el último, siempre te
-    lo he dicho y es que tienes muchas virtudes que sé, que te
-    han formado y fortalecido a lo que eres hoy y eso esta mas
-    que demostrado, visto lo visto hoy estuviste radiante como un
-    diamante y mas con tu sonrisa que nunca dejas de lucir.
+
+<h1>💖 ¡Felicidades mi Heidys por tu grado! 🎓 💖</h1>
+<p>
+    "Ahora sí 🤭, quiero que sepas que estoy muy feliz
+    por el logro que conseguiste el día de hoy. Sé que no es el
+    primero, pero también sé que no será el último. Siempre te
+    lo he dicho y es que tienes muchas virtudes que sé que te
+    han formado y fortalecido a lo que eres hoy, y eso está más
+    que demostrado. Visto lo visto, hoy estuviste radiante como un
+    diamante y más con tu sonrisa que nunca dejas de lucir.
     <br><br>
-
-    No tengo pruebas pero tampoco dudas de que tendras un lindo
-    futuro lleno de muchos exitos, y espero estar ahi en cada
-    uno de ellos aunque sea a la distancia, pero te lo prometo
-    que estare pase lo que pase allí.<br><br>
-
-    ❤️❤️❤️Te quiero mucho mucho mi Heidys, y asi es, un pasito
-    más de esta gran personita que quiere deborarse el mundo por
-    completo!❤️❤️❤️<br><br>
-
-    Felicitaciones 🫶🏻✨ </h1>
+    No tengo pruebas pero tampoco dudas de que tendrás un lindo
+    futuro lleno de muchos éxitos, y espero estar ahí en cada
+    uno de ellos, aunque sea a la distancia, pero te lo prometo
+    que estaré pase lo que pase allí.
+    <br><br>
+    ❤️❤️❤️ Te quiero mucho mucho mi Heidys, y así es, un pasito
+    más de esta gran personita que quiere devorarse el mundo por
+    completo! ❤️❤️❤️
+    <br><br>
+    Felicitaciones 🫶🏻✨
+</p>
 
 <script>
-    for (let i = 0; i < 30; i++) {
-        const c = document.createElement("div");
-        c.className = "corazon";
-        c.innerHTML = "❤️";
-        c.style.left = Math.random() * 100 + "vw";
-        c.style.animationDuration = 3 + Math.random() * 5 + "s";
-        document.body.appendChild(c);
+    // 💞 Crear corazones flotantes
+    const numHearts = 20;
+    for (let i = 0; i < numHearts; i++) {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+      heart.style.fontSize = (12 + Math.random() * 18) + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 8000);
     }
+
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+      heart.style.fontSize = (12 + Math.random() * 18) + "px";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 8000);
+    }, 500);
 </script>
+
 </body>
 </html>
